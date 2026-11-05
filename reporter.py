@@ -1,6 +1,7 @@
 from openpyxl import Workbook 
 
 def write_report(report_path, total_words, files_sorted):
+    report_path.parent.mkdir(parents=True, exist_ok=True)
     wb = Workbook()
     ws = wb.active
     ws.title = "Report"

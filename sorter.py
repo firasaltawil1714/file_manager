@@ -1,6 +1,7 @@
 import shutil
+from logger import write_log
 
-def sort_files(source, base):
+def sort_files(source, base, log_path):
     moved = []
 
     for file in source.glob("*"):
@@ -27,5 +28,6 @@ def sort_files(source, base):
         shutil.move(file, destination)
         print(f"Moved: {file.name} -> {folder_name}")
         moved.append(file.name)
+        write_log(log_path, file.name, folder_name)
 
     return moved

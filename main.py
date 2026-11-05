@@ -7,13 +7,15 @@ import sorter
 def main():
     base = Path(__file__).parent
 
-    moved = sort_files(base / "incoming", base)
+    log_path = base / "logs" / "log.csv"
+    report_path = base / "reports" / "report.xlsx"
+
+    moved = sort_files(base / "incoming", base, log_path)
     total = read_pending_words(base / "data" / "jobs.csv")
-    write_report(base / "report.xlsx", total, len(moved))
+    write_report(report_path, total, len(moved))
 
     print(f"Done. Files sorted: {len(moved)}, words pending: {total}")
 
-    print("USING:", sorter.__file__)
     
 if __name__ == "__main__":
     main()
