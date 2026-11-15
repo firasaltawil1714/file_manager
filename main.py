@@ -2,7 +2,6 @@ from pathlib import Path
 from sorter import sort_files
 from reader import read_pending_words
 from reporter import write_report
-import sorter
 
 def main():
     base = Path(__file__).parent
