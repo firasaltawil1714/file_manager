@@ -8,7 +8,6 @@ and writes a short Excel report.
 3. Writes every moved file (name, folder, time) to `logs/log.csv`.
 4. Reads `data/jobs.csv` and adds up the words of the jobs marked `pending`.
 5. Saves the result in `reports/report.xlsx`.
-
 ## Project structure
 
 - `main.py` runs everything in order
@@ -17,7 +16,6 @@ and writes a short Excel report.
 - `reader.py` reads the CSV
 - `reporter.py` writes the Excel report
 - `make_test_files.py` creates test files, so the project can be run again and again
-
 ## How to run
 
     pip install openpyxl
